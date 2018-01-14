@@ -1,0 +1,40 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{muttukadu}[2017/11/28 because I just visited it]
+
+\RequirePackage[english]{babel}
+\RequirePackage[margin=2cm]{geometry}
+\RequirePackage{booktabs}
+\RequirePackage{array}
+\RequirePackage{graphicx}
+\RequirePackage{hyperref}
+\RequirePackage{blindtext}
+\RequirePackage{sectsty}
+\RequirePackage{fourier}
+\RequirePackage{csquotes}
+\RequirePackage{fontspec}
+%  \setromanfont{Linux Libertine}
+\setromanfont{Utopia Regular}
+\setsansfont{Liberation Sans}
+\setmonofont{Roboto Mono}
+%\RequirePackage[math]{mathspec}
+%  \setmathfont{}
+\pagestyle{empty}
+\allsectionsfont{\sffamily}
+% comments package
+\bibliographystyle{ieeetr}
+\renewcommand\arraystretch{1.5}
+\makeatletter
+\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
+\begin{flushleft}
+\vspace{2cm}
+\begin{huge}
+\textbf{{\sffamily\@title}}
+\\    
+\end{huge}  
+\vspace{8mm}  
+\@author
+\vspace{8mm}
+\end{flushleft}
+\egroup
+}
+\makeatother
