@@ -2,39 +2,47 @@
 \ProvidesPackage{khoa}[2017/11/28]
 
 \RequirePackage[english]{babel}
-\RequirePackage[margin=2cm]{geometry}
+\RequirePackage[margin=2.45cm]{geometry}
 \RequirePackage{booktabs}
 \RequirePackage{array}
-\RequirePackage{graphicx}
+\RequirePackage[dvips,xetex]{graphicx}
 \RequirePackage{hyperref}
 \RequirePackage{blindtext}
 \RequirePackage{sectsty}
 \RequirePackage{fourier}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{matlab-prettifier}
+%\RequirePackage{libertine}
+%\RequirePackage[libertine]{newtxmath}
 \RequirePackage{csquotes}
 \RequirePackage{fontspec}
+\RequirePackage{listings}
+\lstset{breaklines=true}
+\lstset{basicstyle=\ttfamily}
 %  \setromanfont{Linux Libertine}
-\setromanfont{Utopia Regular}
-\setsansfont{Liberation Sans}
-\setmonofont{Roboto Mono}
+  \setromanfont{Utopia Regular}
+  \setsansfont{Liberation Sans}
+  \setmonofont{Roboto Mono}
 %\RequirePackage[math]{mathspec}
 %  \setmathfont{}
-\pagestyle{empty}
+%\pagestyle{none}
 \allsectionsfont{\sffamily}
 % comments package
+
 \bibliographystyle{ieeetr}
 \renewcommand\arraystretch{1.5}
+
 \makeatletter
 \renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
 \begin{flushleft}
-\vspace{2cm}
-\begin{huge}
-\textbf{{\sffamily\@title}}
-\\    
-\end{huge}  
-\vspace{8mm}  
-\@author
+  \vspace{2cm}
+    \begin{huge}
+      \textbf{{\sffamily\@title}} \\
+    \end{huge}
+  \vspace{8mm}
+  \@author
 \vspace{8mm}
-\end{flushleft}
-\egroup
+\end{flushleft}\egroup
 }
 \makeatother
